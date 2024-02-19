@@ -45,7 +45,7 @@ pushd package/custom/luci-app-openclash/tools/po2lmo
 make && sudo make install
 popd
 
-git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+git clone git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 merge_package https://github.com/thinktip/luci-theme-neobird luci-theme-neobird
 merge_package https://github.com/Leo-Jo-My/luci-theme-opentomcat luci-theme-opentomcat
 merge_package https://github.com/Leo-Jo-My/luci-theme-opentomato luci-theme-opentomato
