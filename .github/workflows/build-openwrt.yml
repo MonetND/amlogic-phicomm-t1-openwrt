@@ -201,6 +201,10 @@ on:
           - angel
           - yourname
 
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
   CONFIG_FILE: config/${{ inputs.source_branch }}/config
