@@ -65,6 +65,8 @@ git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 merge_package https://github.com/Lienol/openwrt-package openwrt-package/luci-app-filebrowser
 
+merge_package master https://github.com/sbwml/openwrt_pkgs package/openwrt-packages gowebdav luci-app-gowebdav
+
 # ------------------------------- Other started -------------------------------
 #
 # Add luci-app-amlogic
