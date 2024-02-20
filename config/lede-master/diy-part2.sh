@@ -59,6 +59,9 @@ pushd package/custom/luci-app-openclash/tools/po2lmo
 make && sudo make install
 popd
 
+rm -rf packages/luci-app-netdata
+git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 merge_package https://github.com/Lienol/openwrt-package openwrt-package/luci-app-filebrowser
 
