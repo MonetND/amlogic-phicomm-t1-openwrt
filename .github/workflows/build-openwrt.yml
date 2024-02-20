@@ -12,7 +12,7 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "openwrt-main"
+        default: "lede-master"
         type: choice
         options:
           - openwrt-main
@@ -21,7 +21,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "s912-phicomm-t1"
         type: choice
         options:
           - 全部
@@ -194,7 +194,7 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "ophub"
+        default: "莫奈和"
         type: choice
         options:
           - ophub
