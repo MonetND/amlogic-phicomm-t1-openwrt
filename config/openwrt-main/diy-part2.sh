@@ -29,6 +29,9 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-
 git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
 rm -rf feeds/luci/applications/luci-app-gowebdav
 rm -rf feeds/packages/net/gowebdav
+git clone https://github.com/tty228/luci-app-serverchan.git package/uci-app-serverchan
+git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+
 #svn co https://github.com/sbwml/openwrt_pkgs/trunk/luci-app-gowebdav package/luci-app-gowebdav
 #svn co https://github.com/sbwml/openwrt_pkgs/trunk/gowebdav package/gowebdav
 #git clone https://github.com/vernesong/OpenClash.git -b master --single-branch luci-app-openclash
@@ -55,7 +58,13 @@ function merge_package() {
         done
         cd "$rootdir"
         }
-        merge_package master https://github.com/sbwml/openwrt_pkgs package/openwrt-packages gowebdav luci-app-gowebdav
+        merge_package master https://github.com/sbwml/openwrt_pkgs package/openwrt-packages gowebdav luci-app-gowebdav 
+        merge_package master https://github.com/messense/aliyundrive-webdav/tree/main/openwrt package/openwrt-packages aliyundrive-webdav luci-app-aliyundrive-webdav 
+        merge_package master https://github.com/vernesong/OpenClash package/openwrt-packages luci-app-openclash
+# 编译 po2lmo (如果有po2lmo可跳过)
+pushd package/custom/luci-app-openclash/tools/po2lmo
+make && sudo make install
+popd
         
         # ------------------------------- Other started -------------------------------
 #
