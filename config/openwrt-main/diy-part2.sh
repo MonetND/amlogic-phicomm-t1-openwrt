@@ -29,7 +29,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-
 git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
 rm -rf feeds/luci/applications/luci-app-gowebdav
 rm -rf feeds/packages/net/gowebdav
-git clone https://github.com/tty228/luci-app-serverchan.git package/uci-app-serverchan
+# git clone https://github.com/tty228/luci-app-serverchan.git package/uci-app-serverchan
 git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 
 #svn co https://github.com/sbwml/openwrt_pkgs/trunk/luci-app-gowebdav package/luci-app-gowebdav
